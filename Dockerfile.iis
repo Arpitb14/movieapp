@@ -1,0 +1,5 @@
+FROM microsoft/aspnet
+
+COPY ./websrc c:/inetpub/wwwroot
+
+RUN powershell -command (Restart-Service DNSCache)
