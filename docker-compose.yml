@@ -6,7 +6,6 @@ services:
       dockerfile: Dockerfile.sql
     ports:
       - "1433:1433"
-
   iis:
     build:
       context: .
@@ -15,8 +14,7 @@ services:
       - "sql"
     ports:
       - "80:80"
-
 networks:
   default:
     external:
-      name: nat
+name: nat
