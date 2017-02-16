@@ -1,4 +1,4 @@
-version: '2'
+version: '2.1'
 services:
   sql:
     build:
@@ -14,7 +14,8 @@ services:
       - "sql"
     ports:
       - "80:80"
+
 networks:
   default:
     external:
-name: nat
+      name: nat
